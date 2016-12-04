@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learn PGP</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700,400italic);
+
+      body { font-family: 'Lato'; }
+      h1, h2, h3 {
+        font-family: 'Montserrat';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Source Code Pro'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Easy digital security for everyday life: 10 weird tricks the NSA doesn't want you to know
+
+## SIPB Cluedump, 8 December 2016
+
+### Anish Athalye (aathalye), Merry Mou (mmou), Sam Dukhovni (dukhovni)
+
+---
+
+class: center, middle
+
+![](https://imgs.xkcd.com/comics/security.png)
+
+---
+
+# Overview
+
+TODO
+
+---
+
+
+# Defining Your Thread Model
+
+---
+
+# Before we go on...
+
+* Security can be overwhelming, and you cannot win
+* Choose your battles by defining your threat model
+* Even a little security is (most likely) better than no security, so it's okay if you don't do everything we talk about today, just do whatever you can
+* Our recommendations are our own, based on our experiences, general knowledge, and understanding of the general student's threat model 
+
+---
+
+# Password security
+
+![](https://imgs.xkcd.com/comics/password_strength.png)
+
+---
+
+# Password security: basics
+
+* Password entropy
+* Password generation model
+* `# bits of entropy = log_2(# possibilities)`
+* Ex: 4 dictionary words: `log_2(150000^4) = 69 bits`
+
+* Diceware
+
+* Unique passwords
+
+???
+
+* How to compute password entropy?
+* Define password generation model
+* Assume adversary knows this scheme
+* a little over 150k words in the Oxford English Dictionary
+
+---
+
+# Password managers
+
+* Currently accepted a best practice in security community
+
+* Remember a single strong master password, randomly generate the rest
+
+* Browser plugins
+* Makes life easier for you, also helps prevent phishing attacks
+
+---
+
+# Password managers: recommendations
+
+* https://www.lastpass.com/
+
+TODO - do we want to recommend more than one? 
+
+---
+
+# 2-Factor Authentication
+
+* Something you know (password) + something you have (token)
+
+* SMS, TOTP, U2F
+
+* At least use 2FA for the services you really care about
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/33/YubiKey-4-keychain-and-YubiKey-4-Nano.png)
+
+???
+
+* IS&T will give you a free YubiKey if you ask for it
+* SMS 2FA isn't a really good idea these days - SMS system is pretty insecure
+
+---
+
+# Biometrics: don't use them
+
+* Can't change things once biometrics are compromised
+
+* Your fingerprint isn't protected by the Constitution
+* You're protected against revealing passwords under the Fifth Amendment (right against self-incriminatino)
+
+---
+
+# Internet browsing
+
+* Network connections
+* Browsers
+* Browser extensions
+
+
+---
+
+# Network connections
+
+* Secure vs unsecure network
+* Unsecure network traffic from your device to the access point is unencrypted
+* If you can, always connect to secure networks
+
+* End to End Encryption
+*
+
+---
+
+# Browsers: recommendationas
+
+* No Internet Explorer, Edge
+
+* Firefox is nice, open source, has lots of helpful security browser extensions
+
+* Opera has a free VPN
+* Chromium: open source version of Chrome
+
+---
+
+# Browser extensions
+
+* AdBlock Plus (Firefox, Chrome): blocks scripts serving advertisements; you can also use it to make a "malicious ad" blocklist
+* HTTPS Everywhere (Firefox): tries to use an encrypted connection whenever it can, verifies certificates of websites you visit
+* NoScript (Firefox), NotScripts (Chrome): blocks javascript, Flash, etc.
+* Privacy Badger (Firefox): detects and blocks ads/trackers
+
+---
+
+# Hardware tracking
+
+* Before you lose your phone/laptop/etc., install a device tracking application
+
+* Mac OS / iOS: Find My iPhone
+* Android:
+
+*
+Device tracking + remote wipe
+
+* 
+
+---
+
+# Backups
+
+* Make them (encrypted!). Regularly.
+
+* Backups are good for you in general.
+* In case your laptop dies / is stolen
+
+* Specifically for purposes regarding security, 
+back up your gpg (~/.gnupg), ssh keys (~/.ssh), password manager files, etc.
+
+---
+
+# Backups: recommended steps
+
+* Get an external harddrive
+* Backup using
+* Mac OS: Time Machine
+* Ubuntu:
+* Windows
+
+rd
+
+How: use ??? to make encrypted backups
+
+
+---
+
+# Full Disk Encryption
+
+* Do it so that if someone gets physical access to your machine, they can't also read your files
+* Your data rights are not protected across borders (???)
+
+* Ubuntu
+* Mac
+* Windows
+
+---
+
+
+# Resources
+
+TODO
+
+* Slides at TODO
+
+* EFF Surveillance Self Defense https://ssd.eff.org/
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
+
