@@ -21,11 +21,13 @@
 
 class: center, middle
 
-# Easy digital security for everyday life: 10 weird tricks the NSA doesn't want you to know
+# Easy digital security for everyday life
 
-## SIPB Cluedump, 8 December 2016
+## 10 weird tricks the NSA doesn't want you to know
 
-### Anish Athalye (aathalye), Merry Mou (mmou), Sam Dukhovni (dukhovni)
+#### SIPB Cluedump, 8 December 2016
+
+##### Anish Athalye (aathalye), Merry Mou (mmou), Sam Dukhovni (dukhovni)
 
 ---
 
@@ -35,72 +37,174 @@ class: center, middle
 
 ---
 
-# Overview
+# So why I am here, and why should I care?
 
-TODO
+* People who might care about security
+
+    * cryptonuts
+
+    * journalists
+
+    * activists
+
+    * researchers in dangerous situations
+
+    * anyone who has any reason for the police to not be fond of you
+
+    * people who care about / are friends with those who actually need the security, in order to help provide covering traffic and normalize security culture
+
+    * YOU!
+
+
+* https://haveibeenpwned.com/
+
+
+???
+
+https://haveibeenpwned.com/
+
+traditionally, individuals who care about security include: cryptonuts, journalists, activists, researchers in dangerous situations...
+
+anyone who has any reason the police might not be fond of you
+
+we believe that it is important for everyone to be more aware about their security, and that they can be more secure with surprisingly low effort
+
+
+If there's any chance you might need to be secure in the future, then it's important to start early; getting suddenly paranoid looks suspicious and attracts attention
+
+If you care about any of the people who actually need the security, then you can help by providing covering traffic and normalizing security culture so that security-conscious users stand out less
+
+
+anecdotes:
+
+countless data breaches+dumps - https://haveibeenpwned.com/
+
+NSA surveillance program - LOVEINT
+
+facial recognition databases
 
 ---
 
-
 # Defining Your Thread Model
+
+* Understand your circumstances
+
+    * Who's (possibly) after you?
+
+    * What do they want?
+
+    * What are their capabilities?
+
+
+* Define your needs/values
+
+    * confidentiality, privacy, anonymity, anti-surveillance
+
+    * integrity, authenticity
+
+    * availability
+
+
+???
+
+* talk about our own threat models
 
 ---
 
 # Before we go on...
 
 * Security can be overwhelming, and you cannot win
+
 * Choose your battles by defining your threat model
+
 * Even a little security is (most likely) better than no security, so it's okay if you don't do everything we talk about today, just do whatever you can
+
 * Our recommendations are our own, based on our experiences, general knowledge, and understanding of the general student's threat model 
 
 ---
 
-# Password security
+# Now for the 10 weird - aka relatively low effort - things!
+
+* Passwords
+* Internet browsing
+* Hardware
+
+---
+
+# 1) Get a password manager
+
+---
 
 ![](https://imgs.xkcd.com/comics/password_strength.png)
 
 ---
 
-# Password security: basics
+# 1) Password security: basics
 
 * Password entropy
-* Password generation model
-* `# bits of entropy = log_2(# possibilities)`
-* Ex: 4 dictionary words: `log_2(150000^4) = 69 bits`
+
+    * Password generation model
+
+    * `# bits of entropy = log_2(# possibilities)`
+
+    * Ex: 4 dictionary words: `log_2(150000^4) = 69 bits`
+
 
 * Diceware
 
 * Unique passwords
 
+
 ???
 
 * How to compute password entropy?
-* Define password generation model
-* Assume adversary knows this scheme
-* a little over 150k words in the Oxford English Dictionary
+
+    * Define password generation model
+
+    * Assume adversary knows this scheme
+
+    * a little over 150k words in the Oxford English Dictionary
+
+* How much entropy do you need? 70 bits is good
+
+    * Can calculate based on how many computers attacker has, how long your password needs to stay secure
+
 
 ---
 
-# Password managers
+# 1) Password managers
 
 * Currently accepted a best practice in security community
 
 * Remember a single strong master password, randomly generate the rest
 
 * Browser plugins
-* Makes life easier for you, also helps prevent phishing attacks
+
+    * Makes life easier for you, also helps prevent phishing attacks
+
 
 ---
 
-# Password managers: recommendations
+# 1) Password managers: recommendations
 
-* https://www.lastpass.com/
+* KeePassX
 
-TODO - do we want to recommend more than one? 
+    * https://ssd.eff.org/en/module/how-use-keepassx
+
+
+???
+
+* free and open-source software
+* recommended by EFF
 
 ---
 
-# 2-Factor Authentication
+# 2) Use 2-Factor Authentication
+
+---
+
+
+# 2) 2-Factor Authentication
 
 * Something you know (password) + something you have (token)
 
@@ -108,7 +212,7 @@ TODO - do we want to recommend more than one?
 
 * At least use 2FA for the services you really care about
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/33/YubiKey-4-keychain-and-YubiKey-4-Nano.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/YubiKey-4-keychain-and-YubiKey-4-Nano.png/320px-YubiKey-4-keychain-and-YubiKey-4-Nano.png)
 
 ???
 
@@ -117,12 +221,18 @@ TODO - do we want to recommend more than one?
 
 ---
 
-# Biometrics: don't use them
+# 3) Don't use biometrics
+
+---
+
+# 3) Biometrics: don't use them
 
 * Can't change things once biometrics are compromised
 
 * Your fingerprint isn't protected by the Constitution
-* You're protected against revealing passwords under the Fifth Amendment (right against self-incriminatino)
+
+    * You're protected against revealing passwords under the Fifth Amendment (right against self-incrimination)
+
 
 ---
 
@@ -131,56 +241,114 @@ TODO - do we want to recommend more than one?
 * Network connections
 * Browsers
 * Browser extensions
-
-
----
-
-# Network connections
-
-* Secure vs unsecure network
-* Unsecure network traffic from your device to the access point is unencrypted
-* If you can, always connect to secure networks
-
-* End to End Encryption
-*
+* Online applications
+* Encrypted chat
+* Anonymous browsing
 
 ---
 
-# Browsers: recommendationas
+# 4) Use a secure web browser
 
-* No Internet Explorer, Edge
+---
+
+# 4) Browsers: recommendations
 
 * Firefox is nice, open source, has lots of helpful security browser extensions
 
+
 * Opera has a free VPN
 * Chromium: open source version of Chrome
+* No Internet Explorer, Edge
+
 
 ---
 
-# Browser extensions
+# 5) Use browser extensions that help enforce good security habits
 
-* AdBlock Plus (Firefox, Chrome): blocks scripts serving advertisements; you can also use it to make a "malicious ad" blocklist
+---
+
+# 5) Browser extensions
+
+* uBlock Origin (Firefox, Chrome): blocks scripts serving advertisements; you can also use it to make a "malicious ad" blocklist
+
+    * Not AdBlock Plus
+
+    * **NOT uBlock**
+
 * HTTPS Everywhere (Firefox): tries to use an encrypted connection whenever it can, verifies certificates of websites you visit
-* NoScript (Firefox), NotScripts (Chrome): blocks javascript, Flash, etc.
+* NoScript (Firefox): blocks javascript, Flash, etc, except on pages you've explicitly decided to trust
 * Privacy Badger (Firefox): detects and blocks ads/trackers
 
 ---
 
-# Hardware tracking
-
-* Before you lose your phone/laptop/etc., install a device tracking application
-
-* Mac OS / iOS: Find My iPhone
-* Android:
-
-*
-Device tracking + remote wipe
-
-* 
+# 6) Use online applications that you trust
 
 ---
 
-# Backups
+# 6) Other online applications, search engines
+
+* DuckDuckGo.com: privacy-respecting search engine
+* Framasoft.org: central homepage for many privacy-respecting webapps, such as Framadate.org (like WhenIsGood), Framapad.org (like Google Docs)
+
+
+---
+
+# 7) If you care, use anonymous browsing
+
+---
+
+# 7) Anonymous Browsing with Tor
+
+* Tor is an anonymizing network that routes your traffic through a series of different volunteer-run servers, so no single eavesdropper can tell where it's really going
+* https://www.torproject.org/
+
+---
+
+# 7) Anonymous Browsing with Tor
+
+![](https://www.eff.org/files/tor-https-3.png)
+
+---
+
+# 7) Anonymous Browsing with Tor
+
+* The easiest way to use Tor is with the Tor Browser, a modified version of Firefox with Tor built in
+* https://www.torproject.org/projects/torbrowser.html.en
+* The Tor Browser also includes NoScript and HTTPS Everywhere
+* There's a simple slider to configure how secure vs. usable you want the Tor Browser to be
+   * Click on the onion logo, and select "Privacy and Security Settings"
+
+---
+
+# 8) Use end-to-end encrypted communication
+
+---
+
+
+# 8) Encrypted communication
+
+* The Ideal: End to End Encryption
+
+    * only the 2 people communicating (at the "ends") can read the messages
+
+    * Intermediate servers can't read anything
+
+
+---
+
+# 8) Encrypted communication: recommendations
+
+* Signal
+   * App for iOS and Android phones, super-easy to set up and use
+   * On Android, can set it as default SMS app
+
+---
+
+# 9) Backup early, often, and to completion - especially your security stuff, etc.
+
+---
+
+# 9) Backups
 
 * Make them (encrypted!). Regularly.
 
@@ -188,44 +356,65 @@ Device tracking + remote wipe
 * In case your laptop dies / is stolen
 
 * Specifically for purposes regarding security, 
-back up your gpg (~/.gnupg), ssh keys (~/.ssh), password manager files, etc.
+back up your gpg (~/.gnupg), ssh keys (~/.ssh), password manager files (e.g. your `*.kdbx` file for KeePassX)
 
 ---
 
-# Backups: recommended steps
+# 9) Backups: recommended steps
 
 * Get an external harddrive
 * Backup using
-* Mac OS: Time Machine
-* Ubuntu:
-* Windows
 
-rd
+    * Mac OS: Time Machine (check the box for encrypted backups)
+
+    * Ubuntu:
+
+    * Windows:
+
+
 
 How: use ??? to make encrypted backups
 
+---
+
+# 10) Secure your hardware
 
 ---
 
-# Full Disk Encryption
+# 10) Hardware tracking
+
+* Before you lose your phone/laptop/etc., install a device tracking application
+
+* Mac OS / iOS: Find My iPhone
+* Android:
+
+* Device tracking + remote wipe
+
+* 
+
+---
+
+# 10) Full Disk Encryption
 
 * Do it so that if someone gets physical access to your machine, they can't also read your files
 * Your data rights are not protected across borders (???)
 
 * Ubuntu
-* Mac
+* Mac - enable FileVault
 * Windows
 
 ---
 
+# Resources of varying quality
 
-# Resources
-
-TODO
-
-* Slides at TODO
+* Slides at https://git.io/easy-security
 
 * EFF Surveillance Self Defense https://ssd.eff.org/
+* https://www.cryptoparty.in/
+* http://www.slashgeek.net/2012/06/15/how-to-be-completely-anonymous-online/
+* https://onlinesafety.feministfrequency.com/en
+* https://tech.safehubcollective.org/cybersecurity/
+* riseup.net
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
@@ -235,4 +424,3 @@ TODO
     </script>
   </body>
 </html>
-
