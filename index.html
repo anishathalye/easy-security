@@ -39,7 +39,7 @@ class: center, middle
 
 # So why I am here, and why should I care?
 
-* People who might care about security
+* People who should care about security
 
     * cryptonuts
 
@@ -85,7 +85,7 @@ facial recognition databases
 
 ---
 
-# Defining Your Thread Model
+# Defining Your Threat Model
 
 * Understand your circumstances
 
@@ -117,7 +117,7 @@ facial recognition databases
 
 * Choose your battles by defining your threat model
 
-* Even a little security is (most likely) better than no security, so it's okay if you don't do everything we talk about today, just do whatever you can
+* Even a little security is better than no security, so it's okay if you don't do everything we talk about today, just do whatever you can
 
 * Our recommendations are our own, based on our experiences, general knowledge, and understanding of the general student's threat model 
 
@@ -125,11 +125,13 @@ facial recognition databases
 
 # Now for the 10 weird - aka relatively low effort - things!
 
-* Passwords
+* Authentication
 * Internet browsing
 * Hardware
 
 ---
+
+class: center, middle
 
 # 1) Get a password manager
 
@@ -149,6 +151,7 @@ facial recognition databases
 
     * Ex: 4 dictionary words: `log_2(150000^4) = 69 bits`
 
+    * Ex: 8 random letters (lower case or upper case): `log_2(52^8) = 46 bits`
 
 * Diceware
 
@@ -199,7 +202,9 @@ facial recognition databases
 
 ---
 
-# 2) Use 2-Factor Authentication
+class: center, middle
+
+# 2) Use 2-Factor authentication
 
 ---
 
@@ -212,7 +217,9 @@ facial recognition databases
 
 * At least use 2FA for the services you really care about
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/YubiKey-4-keychain-and-YubiKey-4-Nano.png/320px-YubiKey-4-keychain-and-YubiKey-4-Nano.png)
+<div class="center middle">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/YubiKey-4-keychain-and-YubiKey-4-Nano.png/320px-YubiKey-4-keychain-and-YubiKey-4-Nano.png">
+</div>
 
 ???
 
@@ -220,6 +227,8 @@ facial recognition databases
 * SMS 2FA isn't a really good idea these days - SMS system is pretty insecure
 
 ---
+
+class: center, middle
 
 # 3) Don't use biometrics
 
@@ -233,7 +242,6 @@ facial recognition databases
 
     * You're protected against revealing passwords under the Fifth Amendment (right against self-incrimination)
 
-
 ---
 
 # Internet browsing
@@ -246,6 +254,8 @@ facial recognition databases
 * Anonymous browsing
 
 ---
+
+class: center, middle
 
 # 4) Use a secure web browser
 
@@ -262,6 +272,8 @@ facial recognition databases
 
 
 ---
+
+class: center, middle
 
 # 5) Use browser extensions that help enforce good security habits
 
@@ -281,6 +293,8 @@ facial recognition databases
 
 ---
 
+class: center, middle
+
 # 6) Use online applications that you trust
 
 ---
@@ -292,6 +306,8 @@ facial recognition databases
 
 
 ---
+
+class: center, middle
 
 # 7) If you care, use anonymous browsing
 
@@ -306,7 +322,9 @@ facial recognition databases
 
 # 7) Anonymous Browsing with Tor
 
-![](https://www.eff.org/files/tor-https-3.png)
+<div class="center middle">
+    <img src="https://www.eff.org/files/tor-https-3.png" style="max-width: 80vh; max-height: 50vh;">
+</div>
 
 ---
 
@@ -319,6 +337,8 @@ facial recognition databases
    * Click on the onion logo, and select "Privacy and Security Settings"
 
 ---
+
+class: center, middle
 
 # 8) Use end-to-end encrypted communication
 
@@ -344,6 +364,8 @@ facial recognition databases
 
 ---
 
+class: center, middle
+
 # 9) Backup early, often, and to completion - especially your security stuff, etc.
 
 ---
@@ -356,7 +378,7 @@ facial recognition databases
 * In case your laptop dies / is stolen
 
 * Specifically for purposes regarding security, 
-back up your gpg (~/.gnupg), ssh keys (~/.ssh), password manager files (e.g. your `*.kdbx` file for KeePassX)
+back up your gpg (`~/.gnupg`), ssh keys (`~/.ssh`), password manager files (e.g. your `*.kdbx` file for KeePassX)
 
 ---
 
@@ -377,6 +399,8 @@ How: use ??? to make encrypted backups
 
 ---
 
+class: center, middle
+
 # 10) Secure your hardware
 
 ---
@@ -389,8 +413,6 @@ How: use ??? to make encrypted backups
 * Android:
 
 * Device tracking + remote wipe
-
-* 
 
 ---
 
@@ -405,7 +427,7 @@ How: use ??? to make encrypted backups
 
 ---
 
-# Resources of varying quality
+# Resources
 
 * Slides at https://git.io/easy-security
 
