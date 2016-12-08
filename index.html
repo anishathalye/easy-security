@@ -113,7 +113,7 @@ facial recognition databases
 
 # Before we go on...
 
-* Security can be overwhelming, and you cannot win
+* Security can be overwhelming, and winning is hard
 
 * Choose your battles by defining your threat model
 
@@ -292,6 +292,8 @@ class: center, middle
     * Can do the same thing in Chrome/Chromium Settings menu ("Show advanced settings..." -> Privacy -> Content Settings)
 * Privacy Badger: detects and blocks ads/trackers
 
+* Be careful when installing browser extensions! Check the distributor, check what permissions it requires
+
 ---
 
 class: center, middle
@@ -373,11 +375,10 @@ class: center, middle
 
 # 9) Backups
 
-* Make them (encrypted!). Regularly.
-
 * Backups are good for you in general.
-* In case your laptop dies / is stolen
+* In case your laptop dies / is stolen.
 
+* Make them (encrypted!). Regularly.
 * Specifically for purposes regarding security, 
 back up your gpg (`~/.gnupg`), ssh keys (`~/.ssh`), password manager files (e.g. your `*.kdbx` file for KeePassX)
 
@@ -387,16 +388,9 @@ back up your gpg (`~/.gnupg`), ssh keys (`~/.ssh`), password manager files (e.g.
 
 * Get an external harddrive
 * Backup using
-
     * Mac OS: Time Machine (check the box for encrypted backups)
-
-    * Ubuntu:
-
+    * Ubuntu: rsnapshot on an encrypted (e.g. LUKS) disk
     * Windows:
-
-
-
-How: use ??? to make encrypted backups
 
 ---
 
@@ -409,22 +403,39 @@ class: center, middle
 # 10) Hardware tracking
 
 * Before you lose your phone/laptop/etc., install a device tracking application
+* Enables device tracking + remote wipe
+
 
 * Mac OS / iOS: Find My iPhone
-* Android:
+* Android: Android Device Manager
+* Open source, works on all major OSes, but requires some more tech saavy: Prey (preyproject.com)
 
-* Device tracking + remote wipe
+???
+
+11. Slide 34: The Android tracker is called Android Device Manager, and you turn it on in Settings > Security. Then, you can go to google.com/android/devicemanager to locate your phone, ring it at full volume, remote lock it, and remote wipe it.
+
+If you’re on Linux, the correct solution is Prey (apt install prey). It’s open-source and written in bash. preyproject.com offers a free-as-in-beer monitoring service, but you can roll your own too.
+Oh, and Prey works on Android and iOS too.
+
 
 ---
 
 # 10) Full Disk Encryption
 
 * Do it so that if someone gets physical access to your machine, they can't also read your files
-* Your data rights are not protected across borders (???)
+* When entering the United States, Customs and Border Protection can temporarily detain you, seize your devices, and image them. They can do this without a warrant, and they can do this if you are a citizen. Turn your stuff off before you go through customs.
 
-* Ubuntu
+
 * Mac - enable FileVault
+* Ubuntu - easiest to set up LUKS (Linux Unified Key Setup) when you initially install Ubuntu / format your disks. Frontend is cryptsetup(8). (Don’t forget to encrypt your swap partition!)
 * Windows
+
+---
+
+# Acknowledgements
+
+* Benjamin Barenblat (bbaren)
+* SIPB
 
 ---
 
